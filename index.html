@@ -1,14 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <script src="./script.js"></script>
     <title>Tic Tac Toe</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body onload="init()">
+    <div class="currentPlayer">
+        <span><h1>Player: </h1></span>
+        <img id="player-image" class="playerImage">
+
+    </div>
+    <div class="content">
+      <table>
+        <tr>
+          <td id="0" onclick="fillShape(0)">
+            <img
+              id="circle-0"
+              class="shape d-none"
+              src="./img/circle-outline-64.png"
+            />
+            <img id="cross-0" class="shape d-none" src="./img/x-mark-64.png" />
+          </td>
+          <td id="1" onclick="fillShape(1)">
+            <img
+              id="circle-1"
+              class="shape d-none"
+              src="./img/circle-outline-64.png"
+            />
+            <img id="cross-1" class="shape d-none" src="./img/x-mark-64.png" />
+          </td>
+          <td id="2" onclick="fillShape(2)">
+            <img
+              id="circle-2"
+              class="shape d-none"
+              src="./img/circle-outline-64.png"
+            />
+            <img id="cross-2" class="shape d-none" src="./img/x-mark-64.png" />
+          </td>
+        </tr>
+        <tr>
+          <td id="3" onclick="fillShape(3)">
+            <img
+              id="circle-3"
+              class="shape d-none"
+              src="./img/circle-outline-64.png"
+            />
+            <img id="cross-3" class="shape d-none" src="./img/x-mark-64.png" />
+          </td>
+          <td id="4" onclick="fillShape(4)">
+            <img
+              id="circle-4"
+              class="shape d-none"
+              src="./img/circle-outline-64.png"
+            />
+            <img id="cross-4" class="shape d-none" src="./img/x-mark-64.png" />
+          </td>
+          <td id="5" onclick="fillShape(5)">
+            <img
+              id="circle-5"
+              class="shape d-none"
+              src="./img/circle-outline-64.png"
+            />
+            <img id="cross-5" class="shape d-none" src="./img/x-mark-64.png" />
+          </td>
+        </tr>
+        <tr>
+          <td id="6" onclick="fillShape(6)">
+            <img
+              id="circle-6"
+              class="shape d-none"
+              src="./img/circle-outline-64.png"
+            />
+            <img id="cross-6" class="shape d-none" src="./img/x-mark-64.png" />
+          </td>
+          <td id="7" onclick="fillShape(7)">
+            <img
+              id="circle-7"
+              class="shape d-none"
+              src="./img/circle-outline-64.png"
+            />
+            <img id="cross-7" class="shape d-none" src="./img/x-mark-64.png" />
+          </td>
+          <td id="8" onclick="fillShape(8)">
+            <img
+              id="circle-8"
+              class="shape d-none"
+              src="./img/circle-outline-64.png"
+            />
+            <img id="cross-8" class="shape d-none" src="./img/x-mark-64.png" />
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="end-screen" class="d-none"><h1>Ende</h1></div>
+  </body>
 </html>
