@@ -1,8 +1,4 @@
-let fields = [
-    "none", "none", "none",
-    "none", "none", "none",
-    "none", "none", "none"
-];
+let fields = [];
 
 let img_circle = "./img/circle-outline-64.png";
 let img_cross = "./img/x-mark-64.png";
@@ -22,13 +18,13 @@ function fillShape(id) {
 
     
 
-    if(fields[id] == "none") {
+    if(!fields[id]) {
         setField(id, shape);
         gameIsOver++;
         toggleShape();
     }
     else {
-        if(gameIsOver < fields.length)
+        if(gameIsOver < 9)
         alert(`Sorry Kumpel, ist aber schon belegt ;)`);
         return
     }
@@ -51,10 +47,10 @@ function toggleShape() {
 }
 
     console.log(`shape after toggle: ${shape}`);
-    if(gameIsOver == fields.length) {
-        document.getElementById('end-screen').classList.remove('d-none');
-        document.getElementById('end-screen').classList.add('endScreen');
-    }
+    // if(gameIsOver == 9) {
+    //     document.getElementById('end-screen').classList.remove('d-none');
+    //     document.getElementById('end-screen').classList.add('endScreen');
+    // }
 }
 
 function setField(id) {
@@ -74,4 +70,42 @@ function setField(id) {
     }
 
     console.log(fields);
+
+    checkForWin();
+}
+
+
+function checkForWin() {
+    let winner;
+
+    if(fields[0] == fields[1] && fields[1] == fields[2] && fields[0]) {
+        winner = fields[0];
+    }
+    if(fields[3] == fields[4] && fields[4] == fields[5] && fields[3]) {
+        winner = fields[3];
+    }
+    if(fields[6] == fields[7] && fields[7] == fields[8] && fields[6]) {
+        winner = fields[6];
+    }
+    if(fields[0] == fields[3] && fields[3] == fields[6] && fields[0]) {
+        winner = fields[0];
+    }
+    if(fields[1] == fields[4] && fields[4] == fields[7] && fields[1]) {
+        winner = fields[1];
+    }
+    if(fields[2] == fields[5] && fields[5] == fields[8] && fields[2]) {
+        winner = fields[2];
+    }
+    if(fields[0] == fields[4] && fields[4] == fields[8] && fields[0]) {
+        winner = fields[0];
+    }
+    if(fields[2] == fields[4] && fields[4] == fields[6] && fields[2]) {
+        winner = fields[2];
+    }
+
+    if(winner) {
+        alert(`${winner} hat gewonnen!`);
+        document.getElementById('end-screen').classList.remove('d-none');
+        document.getElementById('end-screen').classList.add('endScreen');
+    }
 }
