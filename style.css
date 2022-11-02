@@ -75,3 +75,55 @@ td:hover {
     align-items: center;
     margin-top: 50px;
 }
+
+.winLine {
+    height: 15px;
+    width: 300px;
+    background-color: red;
+    
+}
+
+.horLineFirstRow {
+    position: absolute;
+    z-index: 1;
+    top: 240px;
+    left: 570px;
+}
+
+.horLineSecondRow {
+    position: absolute;
+    z-index: 1;
+    top: 380px;
+    left: 570px;
+}
+
+.horLineLastRow {
+    position: absolute;
+    z-index: 1;
+    top: 520px;
+    left: 570px;
+}
+
+.vertLineFirstCol {
+    position: absolute;
+    z-index: 1;
+    top: 380px;
+    left: 420px;
+    transform: rotate(90deg);
+}
+
+.vertLineSecondCol {
+    position: absolute;
+    z-index: 1;
+    top: 380px;
+    left: 560px;
+    transform: rotate(90deg);
+}
+
+.vertLineLastCol {
+    position: absolute;
+    z-index: 1;
+    top: 380px;
+    left: 700px;
+    transform: rotate(90deg);
+}
