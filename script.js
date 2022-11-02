@@ -106,9 +106,11 @@ function checkForWin() {
     }
     if(fields[0] == fields[4] && fields[4] == fields[8] && fields[0]) {
         winner = fields[0];
+        classToAdd = 'diagonLineTopLeft';
     }
     if(fields[2] == fields[4] && fields[4] == fields[6] && fields[2]) {
         winner = fields[2];
+        classToAdd = 'diagonLineTopRight';
     }
 
     if(winner) {

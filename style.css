@@ -127,3 +127,22 @@ td:hover {
     left: 700px;
     transform: rotate(90deg);
 }
+
+.diagonLineTopLeft {
+    position: absolute;
+    z-index: 1;
+    top: 380px;
+    left: 500px;
+    transform: rotate(45deg);
+    width: 420px;
+}
+
+.diagonLineTopRight {
+    position: absolute;
+    z-index: 1;
+    top: 380px;
+    left: 500px;
+    transform: rotate(-45deg);
+    width: 420px;
+
+}
